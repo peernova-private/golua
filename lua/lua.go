@@ -7,7 +7,7 @@ package lua
 
 /*
 #cgo CFLAGS: -I /usr/local/include
-#cgo LDFLAGS: /usr/local/lib/liblua.a
+#cgo LDFLAGS: /usr/local/lib/liblua.a -lm -ldl
 
 #include <lua.h>
 #include <stdlib.h>
