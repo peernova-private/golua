@@ -1,13 +1,5 @@
 package lua
 
-/*
-#cgo CFLAGS: -I /usr/local/include
-#cgo LDFLAGS: /usr/local/lib/liblua.a -lm -ldl
-
-#include <lua.h>
-#include <lualib.h>
-#include <stdlib.h>
-*/
 import "C"
 
 import (

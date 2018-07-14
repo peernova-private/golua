@@ -5,16 +5,6 @@
 // The documentation of this package is no substitute for the official lua documentation and in many instances methods are described only with the name of their C equivalent
 package lua
 
-/*
-#cgo CFLAGS: -I /usr/local/include
-#cgo LDFLAGS: /usr/local/lib/liblua.a -lm -ldl
-
-#include <lua.h>
-#include <stdlib.h>
-
-#include "golua.h"
-
-*/
 import "C"
 import "unsafe"
 
@@ -71,9 +61,9 @@ func (L *State) register(f interface{}) uint {
 		index = uint(len(L.registry))
 		//reallocate backing array if necessary
 		if index+1 > uint(cap(L.registry)) {
-			newcap := cap(L.registry)*2
+			newcap := cap(L.registry) * 2
 			if index+1 > uint(newcap) {
-				newcap = int(index+1)
+				newcap = int(index + 1)
 			}
 			newSlice := make([]interface{}, index, newcap)
 			copy(newSlice, L.registry)
