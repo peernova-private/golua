@@ -5,6 +5,14 @@
 // The documentation of this package is no substitute for the official lua documentation and in many instances methods are described only with the name of their C equivalent
 package lua
 
+/*
+
+#include <lua/lua.h>
+#include <stdlib.h>
+
+#include "golua.h"
+
+*/
 import "C"
 import "unsafe"
 

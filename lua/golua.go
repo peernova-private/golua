@@ -1,5 +1,10 @@
 package lua
 
+/*
+#include <lua/lua.h>
+#include <lua/lualib.h>
+#include <stdlib.h>
+*/
 import "C"
 
 import (
